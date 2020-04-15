@@ -6,15 +6,16 @@ function submitData(userName, userEmail){
     email: userEmail
   };
 
-  
+
   let configObj = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify(formData)
-  };
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    };
+
 
   return fetch("http://localhost:3000/users", configObj)
     .then(function(response) {
